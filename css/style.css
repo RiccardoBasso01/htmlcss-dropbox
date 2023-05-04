@@ -4,8 +4,17 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* FUNZIONALITÀ */
 :root{
+    --header-bgc: white;
+    --button-bgc-blue: #0061fe;
+    --bgc-hover-button-blue: #5d9bff;
+    --bgc-hover-nav: #eee9e2;
+    --p-15: 15px;
     --font-size-s:0.7rem;
     --font-size-m:0.9rem;
     --font-size-l:1.3rem;
@@ -26,20 +35,87 @@
     --orange-1: #b25900;
 }
 
-/* FUNZIONALITÀ */
 .center{
     width: 1180px;
     margin: 0 auto;
+}
+
+.display-flex{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 ul{
     list-style-type: none;
 }
 
+/* EFFETTI */
+.nav-menu a:hover, .sign-in_log-in > a:hover{ /* TODO DA MODIFICARE*/
+    background-color: var(--bgc-hover-nav);
+}
+
+.button:hover{
+    background-color: var(--bgc-hover-button-blue); /* TODO DA MODIFICARE*/
+}
 /* HEADER */
-.nav{
-    height: 80px;
-    background-color: var(--grey-0);
+header{
+    position: sticky;
+    top: 0;
+}
+
+/* NAV */
+.nav.display-flex{
+    background-color: var(--header-bgc);
+    align-items: center;
+}
+
+/*parte sinistra*/
+.logo-button{
+    padding: var(--p-15); /*! ripetuto*/
+}
+
+/*parte centrale*/
+.nav-menu{ /* div per separare i link */
+    flex-grow: 1;
+}
+
+.nav-menu a{
+    padding: var(--p-15); /*! ripetuto*/
+}
+
+.nav-menu div{
+    flex-grow: 1;
+}
+
+/*parte destra*/
+.sign-in_log-in{
+    align-items: center;
+}
+
+.sign-in_log-in a{
+    padding: var(--p-15); /*! ripetuto*/
+}
+
+.button{
+    background-color: var(--button-bgc-blue);
+    padding: 10px;
+}
+
+.button a{
+    color: white;
+    padding: 0; /*! ripetuto*/
+}
+
+.nav-button{
+    padding: 0 10px; /* TODO DA MODIFICARE*/
+}
+.nav>*{  /* TODO DA RIMUOVERE*/
+    /* border: 2px solid #ec407a; */
+    display: flex;
 }
 
 .jumbotron{
