@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Riccardo Basso">
     <meta name="description" content="Dropbox.com">
-    <link rel="icon" href="">
+    <link rel="icon" href="img/favicon.ico">
     <title>Dropbox</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,9 +31,7 @@
             <div class="sign-in_log-in">
                 <a href="#">Accedi</a>
                 <div class="nav-button">
-                    <div class="button">
-                        <a href="#">Comincia subito</a>
-                    </div>
+                    <a class="button b-blue" href="#">Comincia subito</a>
                 </div>
             </div>
         </nav>
@@ -44,120 +42,279 @@
             <div class="j-center">
                 <h1>Tutto ciò che ti serve per il lavoro, in un unico posto</h1>
                 <div class="j-card j-center display-flex">
-                    <div class="description">Finalmente tutti i tuoi strumenti, contennuti e collaboratori sono accessibili dallo stesso posto. Dropbox Businnes è più di uno spazio di archiviazione sicuro: è un modo intelligente e integrato per ottimizzare il flusso di lavoro esistente.
-                        <div class="button">
-                            <a href="#">Inizia la tua prova gratuita</a>
-                        </div>
-                        <div>Annulla in qualsiasi momento</div>
+                    <div class="description">
+                        <p>Finalmente tutti i tuoi strumenti, contennuti e collaboratori sono accessibili dallo stesso posto. Dropbox Businnes è più di uno spazio di archiviazione sicuro: è un modo intelligente e integrato per ottimizzare il flusso di lavoro esistente.</p> 
+                        <a class="button b-blue" href="#">Inizia la tua prova gratuita</a>
+                        <span>Annulla in qualsiasi momento</span>
                     </div>
                     <div class="img display-flex"><img src="img/jumbo.png" alt="jumbo"></div>
                 </div>
             </div>
         </div>
+        
+        <div class="center">
+            
+            <h2>Trova il piano business che fa per te</h2>
+            <div class=" display-flex">
+                <div class="billing-plan display-flex">
+                    <span class="circle active"></span>
+                    Fatturazione mensile
+                </div>
+                <div class="billing-plan display-flex">
+                    <span class="circle"></span>
+                    Fatturazione annuale
+                </div>
+            </div>
+            
+            <!-- COLONNE PIANO -->
+            <div class="display-flex g-50">
+                
+                <div class="plan-card display-flex ">
+                    <div class="plan-card_section-top"> <!--parte alta-->
+                        <div class="t-center p-10"><i class="fa-solid fa-user"></i> Singolo</div>
+                    </div>
+                    
+                    <div class="plan-card_section-bottom p-10">  <!--parte bassa-->
+                        <ul>
+                            <li><h3>Professional</h3></li>
+                            <li><b>€ 12.00</b></li>
+                            <li>/mese</li>
+                        </ul>
+                        
+                        <ul class="icon">
+                            <li><i class="fa-solid fa-user"></i><span>1 utente</span></li>
+                            <li><i class="fa-solid fa-folder"></i><span>5 TB di spazio di archiviazione sicuro</span></li>
+                            <li><i class="fa-solid fa-share-nodes"></i><span>Funzioni di produttività premium e condivisione file semplice e sicura</span></li>
+                        </ul>
+                        <div class="display-flex jc-center">
+                            <a class="button b-blue b-large" href="#">Prova gratis per 30 giorni</a>
+                        </div>
+                        <span>oppure <a class="default" href="#">acquista ora</a></span>
+                        <div class="separator"></div>
+                        <h4>Punti salienti del piano</h4>
+                        <ul>
+                            <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Invia file fino a 100 GB con Dropbox Transfert</li>
+                            <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Cartelle offline su dispositivi mobili</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="plan-card display-flex ">
+                    <div class="plan-card_section-top"> <!--parte alta-->
+                        <div class="t-center p-10"><i class="fa-solid fa-users"></i> Team</div>
+                    </div>
+                    
+                    <div class="plan-card_section-bottom p-10">  <!--parte bassa-->
+                        <ul>
+                            <li><h3>Advanced</h3></li>
+                            <li><b>€ 18.00</b></li>
+                            <li>/utente/mese</li>
+                        </ul>
+                        
+                        <ul class="icon">
+                            <li><i class="fa-solid fa-users"></i><span>3 o più utenti</span></li>
+                            <li><i class="fa-solid fa-folder"></i><span>Tutto lo spazio di cui ha bisogno il tuo team</span></li>
+                            <li><i class="fa-solid fa-share-nodes"></i><span>Sofisticate funzioni di controllo e per tenere al sicuro tutti i file del tuo team</span></li>
+                        </ul>
+                        <div class="display-flex jc-center">
+                            <a class="button b-blue b-large" href="#">Prova gratis per 30 giorni</a>
+                        </div>
+                        <span>oppure <a class="default" href="#">acquista ora</a></span>
+                        <div class="separator"></div>
+                        <h4>Punti salienti del piano</h4>
+                        <ul>
+                            <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Nessun limite di spazio per i file</li>
+                            <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Cartelle offline su dispositivi mobili</li>
+                            <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Risparmio del 50% rispetto alle iscrizioni singole</li>
+                            <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Possibilità di inserire nuovi membri nel team</li>
+                            <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Gestione dei permessi in base ai ruoli</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="plan-card display-flex ">
+                    <div class="plan-card_section-top"> <!--parte alta-->
+                        <div class="t-center p-10"><i class="fa-solid fa-building"></i> Azienda</div>
+                    </div>
+                    
+                    <div class="plan-card_section-bottom p-10">  <!--parte bassa-->
+                        <ul>
+                            <li><h3>Professional</h3></li>
+                            <li><b>contattaci</b></li>
+                            <li>-</li>
+                        </ul>
+                        
+                        <ul class="icon">
+                            <li><i class="fa-solid fa-building"></i><span>10 o più utenti</span></li>
+                            <li><i class="fa-solid fa-folder"></i><span>5 TB di spazio di archiviazione sicuro</span></li>
+                            <li><i class="fa-solid fa-share-nodes"></i><span>Funzioni di produttività premium e condivisione file semplice e sicura</span></li>
+                        </ul>
+                        <div class="display-flex jc-center">
+                            <a class="button b-blue b-large" href="#">Contattaci</a>
+                        </div>
+                        <span>oppure <a class="default" href="#">acquista ora</a></span>
+                        <div class="separator"></div>
+                        <h4>Punti salienti del piano</h4>
+                        <ul>
+                            <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Cartelle offline su dispositivi mobili</li>
+                                <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Servizio assistenza 24/h</li>
+                                <li><i class="fa-sharp fa-solid fa-check" style="color: #1e00ff;"></i>Possibilità di personalizzazione totale</li>
+                            </ul>
+                        </div>
+                </div>
+                
+            </div>
+            <!-- RIGA PIANO -->
+            <div class="plan-card display-flex">
+                <div class="plan-card_section-top"> <!--parte alta-->
+                    <div class="t-center p-10"><i class="fa-solid fa-building"></i> Team</div>
+                </div>
+                
+                <div class="plan-card_section-bottom display-flex p-30">  <!--parte bassa-->
+                    <div>
+                        <ul>
+                            <li><h3>Enterprise</h3></li>
+                            <li><b>Contatta l'ufficio vendite per i prezzi</b></li>
+                        </ul>
+                        <span class="m-top">Soluzioni personalizzate e supporto su misura per aiutare i professionisti IT nella gestione su qualsiasi scala</span>
+                    </div>
+                    
+                    <div>
+                        <div class="display-flex jc-center">
+                            <a class="button b-blue b-large" href="#">Contatta l'ufficio vendite</a>
+                        </div> 
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="card display-flex">
+                <div class="img">
+                    <img src="img/partner.png" alt="partner">
+                </div>
+                <div class="description display-flex column">  <!-- !DA TRACCIA NON È NECESSARIO FLEX-->
+                    <h3>Entra in contatto con un partner Dropbox</h3>
+                    <span>Trova un partner Dropbox e HelloSign di fiducia. Ottieni le soluzioni e i servizi necessari per raggiungere i tuoi obiettivi aziendali, tra cui implementazione, integrazione, gestione e supporto continui.</span>
+                    <a class="button b-white" href="#">Trova un partner</a>
+                </div>
+            </div>
+            
+            <!-- DROPBOX BUSINESS -->
+            <h2>Esegui più operazioni con Dropbox Business</h2>
+            
+            <div class="row display-flex">
+                <div class="card">
+                    <div class="img"><img src="img/business-feature-switching-tools.png" alt="switching-tools"></div>
+                    <div class="description">
+                        <h3>Passa di meno da uno strumento all'altro</h3>
+                        <span>Porta a termine le attività quotidiane con un solo strumento. Crea, modifica e condividi contenuti cloud da Documenti, Fogli e Presentazioni di Google, file Microsoft Office e Dropbox Paper direttamente da Dropbox.</span>
+                    </div>
+                </div>
 
-        <div class="flex-grid center">
-            <div class="col">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="card">
+                    <div class="img"><img src="img/business-feature-send-files-it.png" alt="files"></div>
+                    <div class="description">
+                        <h3>Passa di meno da uno strumento all'altro</h3>
+                        <span>Porta a termine le attività quotidiane con un solo strumento. Crea, modifica e condividi contenuti cloud da Documenti, Fogli e Presentazioni di Google, file Microsoft Office e Dropbox Paper direttamente da Dropbox.</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img"><img src="img/business-feature-coordinate-it.png" alt="coordinate"></div>
+                    <div class="description">
+                        <h3>Passa di meno da uno strumento all'altro</h3>
+                        <span>Porta a termine le attività quotidiane con un solo strumento. Crea, modifica e condividi contenuti cloud da Documenti, Fogli e Presentazioni di Google, file Microsoft Office e Dropbox Paper direttamente da Dropbox.</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img"><img src="img/business-feature-integrations-it.png" alt="integrations"></div>
+                    <div class="description">
+                        <h3>Passa di meno da uno strumento all'altro</h3>
+                        <span>Porta a termine le attività quotidiane con un solo strumento. Crea, modifica e condividi contenuti cloud da Documenti, Fogli e Presentazioni di Google, file Microsoft Office e Dropbox Paper direttamente da Dropbox.</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img"><img src="img/business-feature-multi-device.png" alt="multi-device"></div>
+                    <div class="description">
+                        <h3>Passa di meno da uno strumento all'altro</h3>
+                        <span>Porta a termine le attività quotidiane con un solo strumento. Crea, modifica e condividi contenuti cloud da Documenti, Fogli e Presentazioni di Google, file Microsoft Office e Dropbox Paper direttamente da Dropbox.</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img"><img src="img/business-feature-security.png" alt="security"></div>
+                    <div class="description">
+                        <h3>Passa di meno da uno strumento all'altro</h3>
+                        <span>Porta a termine le attività quotidiane con un solo strumento. Crea, modifica e condividi contenuti cloud da Documenti, Fogli e Presentazioni di Google, file Microsoft Office e Dropbox Paper direttamente da Dropbox.</span>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-            </div>
+                
+            <h2>Più di 500.000 team utilizzano Dropbox Business</h2>
+            <a class="default" href="#">Scopri di più sui nostri clienti</a>
         </div>
-
-        <div class="card center">
-            <div class="img"></div>
-            <div class="description"></div>
+    </div>
+        
+    <div class="company-grid-flex">
+        <div class="content">
+            <div class="company-1"></div>
+            <div class="company-2"></div>
+            <div class="company-3"></div>
+            <div class="company-4"></div>
         </div>
-
-        <h2 class="center">ESEGUI...</h2>
-
-        <div class="flex-grid-card center">
-            <div class="card">
-                <div class="img"></div>
-                <div class="description"></div>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <div class="description"></div>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <div class="description"></div>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <div class="description"></div>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <div class="description"></div>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <div class="description"></div>
-            </div>
+        <div class="company-description"></div>
+        <div class="content">
+            <div class="company-1"></div>
+            <div class="company-2"></div>
+            <div class="company-3"></div>
+            <div class="company-4"></div>
         </div>
-
-        <div class="company-grid-flex">
-            <div class="content">
-                <div class="company-1"></div>
-                <div class="company-2"></div>
-                <div class="company-3"></div>
-                <div class="company-4"></div>
-            </div>
-            <div class="company-description"></div>
-            <div class="content">
-                <div class="company-1"></div>
-                <div class="company-2"></div>
-                <div class="company-3"></div>
-                <div class="company-4"></div>
-            </div>
-            <div class="company-link">
-
-            </div>
+        <div class="company-link">
+            
         </div>
+    </div>
+    
+    <div class="faq center">
+        <h3>Domande frequenti</h3>
+        <ul>
+            <li>loremloremloremloremloremloremlorem</li>
+            <li>loremloremloremloremloremloremlorem</li>
+            <li>loremloremloremloremloremloremlorem</li>
+        </ul>
+    </div>
+    
+    
+</main>
 
-        <div class="faq center">
-            <h3>Domande frequenti</h3>
+<footer>
+    <div class="footer-nav center">
+        <div class="col">
             <ul>
-                <li>loremloremloremloremloremloremlorem</li>
-                <li>loremloremloremloremloremloremlorem</li>
-                <li>loremloremloremloremloremloremlorem</li>
+                <li></li>
             </ul>
         </div>
-
-
-    </main>
-
-    <footer>
-        <div class="footer-nav center">
-            <div class="col">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
+        <div class="col">
+            <ul>
+                <li></li>
+            </ul>
         </div>
-    </footer>
+        <div class="col">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

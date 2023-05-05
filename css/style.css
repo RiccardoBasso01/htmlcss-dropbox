@@ -16,14 +16,17 @@ body{
     --bgc-hover-button-blue: #5d9bff;
     --bgc-hover-nav: #eee9e2;
     --p-15: 15px;
+    --p-col: 10px;
     --font-size-s:0.6rem;
     --font-size-m:0.8rem;
-    --font-size-l:1.3rem;
+    --font-size-l:1.5rem;
+    --font-size-xl:2rem;
     --card-space: 2px;
     --center: 1400px;
     --gap-card: 10px;
     --f-height: 70px;
     --h-height: 50px;
+    --j-card-height: 350px;
     --color-card: #ec407a;
     --grey-0: #171717;
     --grey-1: #222222;
@@ -34,10 +37,11 @@ body{
     --grey-6: #cdcdcd;
     --orange-0: #ff8000;
     --orange-1: #b25900;
+    --g-20: 20px
 }
 
 .center{
-    width: 1180px;
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -45,21 +49,93 @@ body{
     display: flex;
 }
 
+.jc-center{
+    justify-content: center;
+}
+
+span{
+    display: inline-block;
+}
+
 a{
     text-decoration: none;
     color: black;
 }
 
+img{
+    display: block;
+}
+
+.default{
+    text-decoration: underline;
+    color: blue;
+}
+
 .button{
-    background-color: var(--button-bgc-blue);
     padding: 10px;
-    display: inline-block;
+    display: inline-block;  /*! DA RIVEDERE*/
+}
+
+.b-blue{
+    background-color: var(--button-bgc-blue);
+    color: white;
+}
+
+.b-white{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.b-small{
+    padding: 5px;
+}
+
+.b-large{
+    min-width: 250px;
+    text-align: center;
 }
 
 ul{
     list-style-type: none;
 }
 
+h2{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: var(--font-size-xl);
+}
+
+h4{
+    margin-top: 50px;
+}
+
+.t-center{
+    text-align: center;
+}
+
+.b-bottom{
+    border-bottom: 1px solid black
+}
+
+.p-10{
+    padding: 10px;
+}
+
+.p-30{
+    padding: 30px;
+}
+.g-50{
+    gap: 50px;
+}
+
+.m-top{
+    margin-top: 40px;
+}
+.column{  /* TODO DA MODIFICARE*/
+    flex-direction: column;
+}
 /* EFFETTI */
 .nav-menu a:hover, .sign-in_log-in > a:hover{ /* TODO DA MODIFICARE*/
     background-color: var(--bgc-hover-nav);
@@ -74,6 +150,7 @@ header{
     position: sticky;
     top: 0;
     font-size: var(--font-size-m);
+    border-bottom: 1px solid var(--bgc-hover-nav);
 }
 
 /* NAV */
@@ -116,12 +193,6 @@ header{
     padding: var(--p-15); /*! ripetuto*/
 }
 
-
-.button a{
-    color: white;
-    padding: 0; /*! ripetuto*/
-}
-
 .nav-button{
     padding: 0 10px; /* TODO DA MODIFICARE*/
 }
@@ -136,8 +207,7 @@ header{
     height: 550px;
     background-color: var(--jumbo-bcg);
     padding-top: 50px;
-
-    /* border: 1px solid black; */
+    margin-bottom: 50px;
 }
 
 h1{
@@ -152,7 +222,7 @@ h1{
 
 .j-card{
     margin-top: 50px;
-    height: 350px;
+    height: var(--j-card-height);
 }
 
 .j-card .button{
@@ -174,63 +244,100 @@ h1{
     height: 100%;
 }
 
+/* INIZIO "MAIN" */
+.billing-plan{  /*piano di fatturazione*/
+    align-items: center;
+    margin-right: 50px;
+}
 
-.flex-grid{
+.circle{
+    padding: 10px;
+    margin-right: 5px;
+    border: 2px solid var(--grey-6);
+    border-radius: 50%;
+}
+
+.circle.active{
+    border: 5px solid #0061fe;
+    padding: 6px;
+}
+
+
+/* !CARD DEL PIANO DI FATTURAZIONE */
+.plan-card{
+    flex-direction: column;    /*!INSERISCO A PARTE ?*/
+    margin: 50px 0;
+    border: 1px solid var(--grey-6);
+    width: calc(100% );  /*TODO DA RIVEDERE*/
+}
+
+.plan-card_section-top{
+    border-bottom: 1px solid var(--grey-6);
+}
+
+.icon{
+    margin: 50px 0;  /*!DA RIVEDERE ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+}
+
+.plan-card li{
     display: flex;
-    flex-direction: column;
-    margin-top: 200px;
+    align-items: baseline;
+    gap: 5px;
+    margin-bottom: 20px;
 }
 
-.flex-grid .col div:nth-child(odd){
-    background-color: var(--grey-2);
+.plan-card_section-bottom > span{  /*acquista ora*/
+    margin: 50px 0;
 }
 
-.flex-grid .col div{
-    width: calc(100% / 3);
-    height: 400px;
-    padding: 20px;
-    background-color: var(--grey-3);
+.separator{
+    width: 50px;
+    border-top: 1px solid var(--grey-6);
 }
 
-.col{
-    display: flex;
-    width: 100%;
-}
-
-.row{
-    background-color: var(--grey-4);
-    height: 200px;
-    margin-top: 10px;
-}
-
+/* !CARD */
 .card{
-    display: flex;
-    height: 300px;
-    margin-top: 20px;
+    margin-top: 20px;   /*TODO */
 }
 
 .card .img{
-    flex: 0 0 50%;
-    background-color: var(--grey-5);
-    height: 100%;
+    flex: 0 0 60%;
 }
 
-.card .description{
-    flex: 0 0 50%;
-    background-color: var(--grey-3);
+.card .img img{     /*TODO IMMAGINI CARD */
+    width: 100%;
 }
 
-.flex-grid-card{
-    display: flex;
-    gap: 10px;
+.card .description{   /*TODO DESCRIZIONI CARD */
+    flex: 0 0 40%;
+    align-items: center;      /*! DA TRACCIA NON È NECESSARIO*/
+    justify-content: center;
+    padding: 50px;
+}
+
+.description .button{     /*! DA TRACCIA NON È NECESSARIO*/
+    align-self: start;   
+}
+
+.description span{     /*TODO */
+    margin: 30px 0;
+}
+
+/* !GRIGLIA DI CARD PICCOLE */
+.row{
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.flex-grid-card .card{
-flex-direction: column;
-width: 350px;
+.row .card{
+    flex: 0 0 calc(100% / 3);
 }
+
+.row .description{   /*TODO */
+    padding: 20px;
+}
+
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO FINO A QUI OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
 
 .company-grid-flex{
     display: flex;
@@ -299,9 +406,4 @@ footer{
 .footer-nav{
     display: flex;
     padding-top: 30px;
-}
-
-.col{
-    border: 2px solid white;
-    height: 300px;
 }
