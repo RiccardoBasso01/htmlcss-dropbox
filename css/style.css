@@ -107,10 +107,6 @@ h2{
     font-size: var(--font-size-xl);
 }
 
-h4{
-    margin-top: 50px;
-}
-
 .t-center{
     text-align: center;
 }
@@ -136,6 +132,12 @@ h4{
 .column{  /* TODO DA MODIFICARE*/
     flex-direction: column;
 }
+
+.separator{
+    width: 50px;
+    border-top: 1px solid var(--grey-6);
+    margin: 50px 0;
+}
 /* EFFETTI */
 .nav-menu a:hover, .sign-in_log-in > a:hover{ /* TODO DA MODIFICARE*/
     background-color: var(--bgc-hover-nav);
@@ -145,6 +147,27 @@ h4{
     background-color: var(--bgc-hover-button-blue); /* TODO DA MODIFICARE*/
 }
 
+.content > div:hover{
+    border: 20px solid rgba(0,0,0,0.2);
+}
+
+/*effetto in hover lista domande frequenti*/
+.faq li:hover .fa-chevron-down{
+    display: none;
+}
+
+.faq li:hover .fa-chevron-up{
+    display: inline-block;
+}
+
+.faq li:hover div:last-child{
+    display: inline-block;
+}
+
+/*effetto underline navbar footer*/
+.footer-nav a:hover{
+    text-decoration: underline;
+}
 /* HEADER */
 header{
     position: sticky;
@@ -162,7 +185,7 @@ header{
 
 /*parte sinistra*/
 .logo-button{
-    padding: 0 var(--p-15); ! ripetuto
+    padding: 0 var(--p-15); /*! ripetuto*/
     /* !height: 100%; */
 }
 
@@ -286,13 +309,8 @@ h1{
     margin-bottom: 20px;
 }
 
-.plan-card_section-bottom > span{  /*acquista ora*/
-    margin: 50px 0;
-}
-
-.separator{
-    width: 50px;
-    border-top: 1px solid var(--grey-6);
+.plan-card_section-bottom > span{  /*!acquista ora*/
+    margin-top: 50px;
 }
 
 /* !CARD */
@@ -337,73 +355,149 @@ h1{
     padding: 20px;
 }
 
-/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO FINO A QUI OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
-
-.company-grid-flex{
-    display: flex;
+.company-grid{
     flex-wrap: wrap;
-    /* height: 500px; */
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .content{
-    flex: 0 0 calc(100% / 3);
-    height: 200px;
-    display: flex;
+    flex: 0 0 calc(100% / 3); 
+    height: calc(100vw / 3);
     flex-wrap: wrap;
-    align-content: stretch;
 }
 
-.company-1{
-    background-color: var(--grey-0);
+.content > div{
+    border: 20px solid transparent;
     width: 50%;
     height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.company-2{
-    background-color: var(--grey-1);
+.content img{
     width: 50%;
-    height: 50%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(219deg) brightness(105%) contrast(101%);
 }
 
-.company-3{
-    background-color: var(--grey-2);
-    width: 50%;
-    height: 50%;
+#designit{
+    background-color: #a2d39b;
 }
 
-.company-4{
-    background-color: var(--grey-3);
-    width: 50%;
-    height: 50%;
+#arizona{
+    background-color: #61082b;
+}
+
+#florida{
+    background-color: #0093ce;
+}
+
+#topps{
+    background-color: #ff1c1c;
+}
+
+#world_bicycle_relief{
+    background-color: #d5001f;
+}
+
+#hearst_corp{
+    background-color: #b4d0e7;
+}
+
+#lonely_planet{
+    background-color: #0d2481;
+}
+
+#clear_channel{
+    background-color: #ffd830;
 }
 
 .company-description{
-    /* flex: 1 0 auto; */
     flex: 0 0 calc(100% / 3);
-    height: 200px;
-    /* background-color: #ec407a; */
-    background-color: var(--orange-1);
+    background-color: #f5f5f5;
+    padding: 50px;
+}
+
+.company-description p{
+    margin-bottom: 50px;
 }
 
 .company-link{
-    height: 200px;
+    height: 400px;
     width: 100%;
-    background-color: var(--orange-0);
+    background-color: #b4d0e7;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+.company-link *{
+    margin: 0;
 }
 
 .faq{
-    text-align: center;
     margin-top: 50px;
 }
 
+.faq li{
+    border-top: 1px solid black;
+    padding: 50px 0;
+}
+
+.fa-chevron-up{
+    display: none;
+}
+
+.faq li div:last-child{
+    margin-top: 50px;
+    display: none;
+}
+
+.faq li div:first-child{
+    justify-content: space-between;
+}
+
+.faq li:last-child{
+    border-bottom: 1px solid black;
+
+}
+
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO FINO A QUI OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
 /* FOOTER */
 footer{
-    height: 500px;
-    background-color: var(--grey-0);
+    margin-top: 50px;
+    background-color: black;
+    color: white;
 }
 
 .footer-nav{
-    display: flex;
-    padding-top: 30px;
+    padding: 100px 0;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+h3{
+    margin: 20px 0;
+}
+
+.footer-nav a{
+    display: inline-block;
+    margin: 10px 0;
+    color: white;
+}
+
+#languages{
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+#languages option{
+    color: black;
+}
+
+.language-menu{
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 50px 0;
 }
